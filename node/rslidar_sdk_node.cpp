@@ -63,6 +63,7 @@ static void sigHandler(int sig)
 int main(int argc, char** argv)
 {
   signal(SIGINT, sigHandler);  ///< bind ctrl+c signal with the sigHandler function
+  signal(SIGTERM, sigHandler);
 
   RS_TITLE << "********************************************************" << RS_REND;
   RS_TITLE << "**********                                    **********" << RS_REND;
